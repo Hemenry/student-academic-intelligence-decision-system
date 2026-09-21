@@ -66,7 +66,7 @@
 | :-: | :-: |
 | ![学业预警](docs/screenshots/07-risk-alerts.png) | ![选课规则](docs/screenshots/08-rules.png) |
 
-> 全部 12 张截图见 [docs/screenshots](docs/screenshots)（含课程库、选课统计等页面）。
+> 全部 12 张截图见 [docs/screenshots](docs/screenshots)（含课程库、选课统计等其他页面）。
 
 ## 四、目录结构
 
