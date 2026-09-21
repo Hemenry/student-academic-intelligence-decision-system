@@ -254,4 +254,4 @@ python scripts/concurrency_test.py --threads 40      # 并发抢 3 个名额，�
 - [架构与核心设计](docs/ARCHITECTURE.md)
 - [数据库设计](docs/DATABASE.md)
 - [接口文档](docs/API.md)
-- [面试问答口径](docs/INTERVIEW.md)
+
