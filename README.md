@@ -40,7 +40,35 @@
 - 选课规则：规则的启停与参数调整，改完即刻生效
 - 选课统计：各教学班选课率排行
 
-## 三、目录结构
+## 三、界面预览
+
+**学生端**
+
+| 学业概览 | 智能选课 |
+| :-: | :-: |
+| ![学业概览](docs/screenshots/01-student-home.png) | ![智能选课](docs/screenshots/02-course-selection.png) |
+
+| 个人课表 | 智能推荐 |
+| :-: | :-: |
+| ![个人课表](docs/screenshots/03-timetable.png) | ![智能推荐](docs/screenshots/04-recommendation.png) |
+
+| 毕业进度 | 学业体检 |
+| :-: | :-: |
+| ![毕业进度](docs/screenshots/11-graduation-progress.png) | ![学业体检](docs/screenshots/12-risk-checkup.png) |
+
+**管理端**
+
+| 教务数据看板 | 开课计划 |
+| :-: | :-: |
+| ![教务数据看板](docs/screenshots/10-admin-dashboard.png) | ![开课计划](docs/screenshots/06-offerings.png) |
+
+| 学业预警 | 选课规则配置 |
+| :-: | :-: |
+| ![学业预警](docs/screenshots/07-risk-alerts.png) | ![选课规则](docs/screenshots/08-rules.png) |
+
+> 全部 12 张截图见 [docs/screenshots](docs/screenshots)（含课程库、选课统计等页面）。
+
+## 四、目录结构
 
 ```
 new_studentSystem/
@@ -54,9 +82,9 @@ new_studentSystem/
 │   │   │   ├── redis_client.py     # 缓存/黑名单/分布式锁（含降级）
 │   │   │   └── exceptions.py       # 业务异常 + 全局异常处理器
 │   │   ├── db/                     # 引擎、Session、建库建表
-│   │   ├── models/                 # 16 张表的 ORM 模型
+│   │   ├── models/                 # 15 张表的 ORM 模型
 │   │   ├── schemas/                # Pydantic 请求/响应模型
-│   │   ├── api/v1/                 # 10 个路由模块，64 个接口
+│   │   ├── api/v1/                 # 10 个路由模块，65 个接口
 │   │   └── services/               # 业务核心：规则引擎、选课、推荐、风险、成绩
 │   ├── scripts/
 │   │   ├── seed_data.py            # 一键生成完整演示数据
@@ -78,7 +106,7 @@ new_studentSystem/
     └── INTERVIEW.md                # 面试问答（项目讲解口径）
 ```
 
-## 四、快速开始
+## 五、快速开始
 
 ### 0. 一键启动（推荐）
 
@@ -170,7 +198,7 @@ python scripts/concurrency_test.py --threads 40      # 并发抢 3 个名额，�
 
 ---
 
-## 五、核心亮点（面试可讲）
+## 六、核心亮点（面试可讲）
 
 ### 1. 选课并发安全：三重防线，实测不超卖
 
@@ -221,7 +249,7 @@ python scripts/concurrency_test.py --threads 40      # 并发抢 3 个名额，�
 
 ---
 
-## 六、文档索引
+## 七、文档索引
 
 - [架构与核心设计](docs/ARCHITECTURE.md)
 - [数据库设计](docs/DATABASE.md)
