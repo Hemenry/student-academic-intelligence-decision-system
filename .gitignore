@@ -1,0 +1,63 @@
+# ==================== 敏感配置 ====================
+# 绝不能提交：含数据库密码、JWT 密钥
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+ENV/
+
+# ==================== Node ====================
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/node_modules/.vite/
+*.local
+.npm/
+.yarn/
+pnpm-lock.yaml
+
+# ==================== 日志与运行时产物 ====================
+*.log
+logs/
+uvicorn.log
+vite.log
+*.pid
+*.seed
+
+# ==================== 编辑器 / 系统 ====================
+.idea/
+.vscode/
+!.vscode/extensions.json
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==================== 项目内部工作区 ====================
+# 存放开发过程记录与工作记忆，不属于项目代码
+.workbuddy/
+
+# ==================== 个人文档 ====================
+# 面试讲解稿属于个人资料，不随项目公开
+my_ll.md

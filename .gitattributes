@@ -1,0 +1,25 @@
+# 统一换行符：仓库内一律存 LF，检出时按平台处理。
+# 关键作用：start.sh 若被转成 CRLF，在 macOS/Linux 上执行会报
+# "/bin/bash^M: bad interpreter"，因此对 shell 脚本强制 LF。
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.bash text eol=lf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# 二进制文件不做换行转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.woff binary
+*.woff2 binary
+
+# 让 GitHub 语言统计更准确：把生成物与第三方目录标记为不参与统计
+frontend/package-lock.json  linguist-generated=true
+docs/screenshots/*          linguist-documentation=true

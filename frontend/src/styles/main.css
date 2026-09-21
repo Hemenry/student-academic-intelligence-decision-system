@@ -1,0 +1,180 @@
+:root {
+  --brand: #2f6fed;
+  --brand-dark: #1d4ed8;
+  --bg: #f5f7fb;
+  --card-shadow: 0 2px 12px rgba(15, 35, 95, 0.06);
+  --text-strong: #1f2d3d;
+  --text-sub: #7b8798;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-strong);
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.page-desc {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  padding: 18px 20px;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  padding: 16px 18px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: var(--text-strong);
+}
+
+.stat-value.brand {
+  color: var(--brand);
+}
+
+.stat-value.danger {
+  color: #e5484d;
+}
+
+.stat-value.success {
+  color: #12a150;
+}
+
+.stat-hint {
+  font-size: 12px;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.muted {
+  color: var(--text-sub);
+  font-size: 12px;
+}
+
+.reason-list {
+  margin: 0;
+  padding-left: 16px;
+  color: #50607a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* 周课表 */
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid #e8ecf3;
+  text-align: center;
+  vertical-align: top;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.timetable th {
+  background: #f7f9fc;
+  color: #56657d;
+  font-weight: 600;
+  height: 38px;
+}
+
+.timetable td {
+  height: 54px;
+}
+
+.timetable .section-col {
+  width: 62px;
+  background: #f7f9fc;
+  color: #7b8798;
+  line-height: 1.4;
+}
+
+.cell-course {
+  border-radius: 6px;
+  padding: 6px 4px;
+  color: #fff;
+  line-height: 1.45;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.cell-course .name {
+  font-weight: 600;
+  display: block;
+}
+
+.color-0 { background: #2f6fed; }
+.color-1 { background: #12a150; }
+.color-2 { background: #f59e0b; }
+.color-3 { background: #8b5cf6; }
+.color-4 { background: #0ea5e9; }
+.color-5 { background: #ef4444; }
+.color-6 { background: #14b8a6; }
+.color-7 { background: #6366f1; }
+
+.rank-badge {
+  display: inline-block;
+  min-width: 22px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: #eef3ff;
+  color: var(--brand);
+  font-size: 12px;
+  text-align: center;
+}
